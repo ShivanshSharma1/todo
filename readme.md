@@ -1,7 +1,7 @@
 # Discord Giveaway Join Bot
 This bot will automatically look for giveaways and join them.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kuuhhl/Discord-Giveaway-Join-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ShivanshSharma1/todo)
 
 # Dependencies
 ```
