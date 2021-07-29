@@ -82,14 +82,14 @@ async def main(auth_token):
 
         ### GET server IDs
         print("Fetching servers...")
-        tasks = [get_server_ids(session, auth_token)]
+        tasks = [get_server_ids(session, 'Nzc5NzQ1MzIyNzMzNjY2MzE0.YD-V2w.0p0WrAl6dauBvDBOwtrilYWdpxk')]
         for t in tqdm.tqdm(asyncio.as_completed(tasks), total=len(tasks)):
             server_ids = await t
 
         ### GET channel IDs
         print("Fetching channels...")
         tasks = [
-            get_channel_ids(session, auth_token, server_id) for server_id in server_ids
+            get_channel_ids(session, 'Nzc5NzQ1MzIyNzMzNjY2MzE0.YD-V2w.0p0WrAl6dauBvDBOwtrilYWdpxk', server_id) for server_id in server_ids
         ]
         channel_ids = []
         for t in tqdm.tqdm(asyncio.as_completed(tasks), total=len(tasks)):
@@ -99,7 +99,7 @@ async def main(auth_token):
         ### GET messages
         print("Fetching messages...")
         tasks = [
-            get_messages(session, auth_token, channel_id) for channel_id in channel_ids
+            get_messages(session, 'Nzc5NzQ1MzIyNzMzNjY2MzE0.YD-V2w.0p0WrAl6dauBvDBOwtrilYWdpxk', channel_id) for channel_id in channel_ids
         ]
         channels = []
         for t in tqdm.tqdm(asyncio.as_completed(tasks), total=len(tasks)):
